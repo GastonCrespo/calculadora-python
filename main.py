@@ -1,6 +1,7 @@
 """Punto de entrada de la calculadora por consola."""
 
 from calculadora import dividir, multiplicar, restar, sumar
+from validaciones import ingresar_numero
 
 
 def main():
@@ -13,11 +14,8 @@ def main():
 
     opcion = input("\nElegi una opcion: ")
 
-    primer_numero = input("Ingresa el primer numero: ")
-    segundo_numero = input("Ingresa el segundo numero: ")
-
-    a = float(primer_numero)
-    b = float(segundo_numero)
+    a = ingresar_numero("Ingresa el primer numero: ")
+    b = ingresar_numero("Ingresa el segundo numero: ")
 
     if opcion == "1":
         resultado = sumar(a, b)
